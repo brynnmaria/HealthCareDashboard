@@ -2,16 +2,8 @@ body{
   background-color: #F6F7F8;
 }
 
-.main-container {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  /* height: calc(100vh - 86px); */
-}
-
-.navbar-toggler{
-  margin-right: 32px;
+.navbar{
+  padding-bottom: 0;
 }
 
 #page-header {
@@ -24,10 +16,9 @@ body{
   padding: 10px;
 }
 
-.navbar{
-  padding-bottom: 0;
+.navbar-toggler{
+  margin-right: 32px;
 }
-
 
 .tech-care-logo {
   padding-left: 32px;
@@ -53,11 +44,40 @@ body{
   margin: 0;
 }
 
+.headder-list-home {
+  display: flex;
+}
+
+.header-icon:hover{
+  background-color: #F6F7F8;
+  padding: 11px 16px;
+  border-radius: 41px;
+}
+
+.header-icon.icon-selected {
+  background-color: #01F0D0;
+  padding: 11px 16px;
+  border-radius: 41px;
+}
+
+.header-icon {
+  padding: 11px 16px;
+  cursor: pointer;
+}
+
 .header-end{
   flex-basis: 27.5%;
   display: flex;
   justify-content: flex-end;
   padding-right: 32px;
+}
+
+.header-image {
+  display: flex;
+  border-right: 1px solid lightgray;
+  padding-right: 10px;
+  margin-right: 10px;
+
 }
 
 .header-end-text {
@@ -77,44 +97,29 @@ body{
   cursor: pointer;
 }
 
-.headder-list-home {
-  display: flex;
-}
-
-.header-image {
-  display: flex;
-  border-right: 1px solid lightgray;
-  padding-right: 10px;
-  margin-right: 10px;
-
-}
-
-
-li {
-  display: flex;
-
-}
-
-.header-icon {
-  padding: 11px 16px;
-  cursor: pointer;
-}
-
-.header-icon:hover{
-  background-color: #F6F7F8;
-  padding: 11px 16px;
-  border-radius: 41px;
-}
-
-.header-icon.icon-selected {
-  background-color: #01F0D0;
-  padding: 11px 16px;
-  border-radius: 41px;
-}
-
 #setting-icon{
   padding-right: 10px;
 }
+
+.three-dot-horizontal-icon{
+  display: flex;
+}
+
+.main-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  /* height: calc(100vh - 86px); */
+}
+
+.col-md-12{
+  max-width: 766px;
+}
+
+.col-md-6{
+ max-width: 360px;
+} 
 
 .patients-main-container {
   padding: 0;
@@ -125,24 +130,10 @@ li {
   width: 100%;
 }
 
-.lab-result:hover{
-  padding: 11px 16px;
-  border-radius: 41px;
-  background-color: #F6F7F8;
-  cursor: pointer;
-}
-
-.lab-results-scroll{
-  max-height: 100%;
-  overflow: scroll;
-}
-
 .patients-top-container{
-  
   display: flex;
   justify-content: space-between;
   padding: 20px;
-
 }
 
 #patients-title{
@@ -154,21 +145,6 @@ li {
   cursor: pointer;
 }
 
-.patients-info-list{
-  display: flex;
-  justify-content: space-between;
-  transition: 500ms;
-}
-
-.patients-info-list:hover{
-  cursor: pointer;
-  background-color: #F6F7F8;
-}
-
-.patients-info-list.selected{
-  background-color: #D8FCF7;
-}
-
 #patients-list-container{
   padding-left: 20px;
   padding: 0;
@@ -177,34 +153,8 @@ li {
  height: 1049px;
 }
 
-.patient-img{
-  padding-right: 12px;
-  width: 60px;
-  height: auto;
-}
-
-.patient-gender-age p{
-  margin: 0;
-  padding: 0;
-  display:flex;
-}
-
-.three-dot-horizontal-icon{
+li {
   display: flex;
-}
-
-
-.patient-section{
-  display: flex;
-}
-
-.patient-section-selected{
-  background-color: #D8FCF7;
-}
-
-.patients-info-list{
-  justify-content: space-between;
-  padding: 20px;
 }
 
 .diagnosis-main-container{
@@ -219,21 +169,6 @@ li {
   padding: 20px 0px 40px 20px;
 }
 
-.diagnosis-title{
-  font-size: 24px;
-}
-
-
-#chart-container{
-  width: 100%;
-  height: auto;
-  background-color: #F4F0FE;
-  border-radius: 12px;
-  display: flex;
-  flex-basis: 33.33%;
-
-}
-
 #chart-details-container{
   background-color: #F4F0FE;
   width: 100%;
@@ -241,7 +176,6 @@ li {
   margin: 0 auto;
   border-radius: 12px;
   display: flex;
-
 }
 
 #blood-pressure-chart-container{
@@ -252,7 +186,16 @@ li {
   display: flex;
   align-items: end;
   padding: 16px 0 4px 16px;
+}
 
+#blood-time-frame-container{
+  display: flex;
+  flex-basis: 30%;
+}
+
+.blood-pressure-info{
+  margin: 0;
+  padding-right: 14px;
 }
 
 #blood-pressure{
@@ -266,53 +209,43 @@ li {
   text-wrap: nowrap;
 }
 
-.blood-pressure-info{
-  margin: 0;
-  padding-right: 14px;
-}
-
 #blood-pressure-result-icon{
   cursor: pointer;
 }
 
-#blood-time-frame-container{
-  display: flex;
-  flex-basis: 30%;
- 
-}
-
 canvas{
-
   width: 100% !important;
   height:298px !important;
   padding: 16px;
+}
 
+#chart-container{
+  width: 100%;
+  height: auto;
+  background-color: #F4F0FE;
+  border-radius: 12px;
+  display: flex;
+  flex-basis: 33.33%;
 }
 
 #diagnosis-metrics-container{
-
   width: 100%;
   background-color: #F4F0FE;
   border-radius: 12px;
   padding: 10px;
-
-
-
 }
 
 #systolic-container{
   padding-top: 16px;
-
-}
-
-#diastolic-container{
-
-
 }
 
 .diagnosis-result-container{
   display: flex;
   padding-bottom: 8px;
+}
+
+.diagnosis-title{
+  font-size: 24px;
 }
 
 .dot {
@@ -339,16 +272,16 @@ canvas{
   font-weight: bold;
 }
 
-.diagnosis-text-result{
-  font-weight: normal;
-  font-size: 14px;
-}
-
 .diagnosis-number-result{
   font-size: 22px;
   padding-bottom: 12px;
   font-weight: bold;
   margin: 0;
+}
+
+.diagnosis-text-result{
+  font-weight: normal;
+  font-size: 14px;
 }
 
 hr{
@@ -357,6 +290,10 @@ hr{
   margin-top: 16px;
   margin-bottom: 16px;
   width: 90%;
+}
+
+.health-card-container-wrapper{
+  display: flex;
 }
 
 .health-card-container{
@@ -400,10 +337,6 @@ hr{
   padding-bottom: 16px;
 }
 
-.health-card-container-wrapper{
-  display: flex;
-}
-
 #middle-card{
   margin-left: 0px;
   background-color: #FFE6E9;
@@ -413,12 +346,6 @@ hr{
   margin-left: 0px;
   background-color: #FFE6F1;
 }
-
-#diagnostic-table{
-  font-size: 14px;
-}
-
-
 
 .diagnostic-list-main-container{
   background-color: white;
@@ -434,6 +361,14 @@ hr{
   margin: 0;
 }
 
+tbody, td, tfoot, th, thead, tr {
+  border-color: #F6F7F8;
+}
+
+#diagnostic-table{
+  font-size: 14px;
+}
+
 .diagnostic-txt-container{
   justify-content: space-between;
   padding: 15px 0 14px 16px;
@@ -447,18 +382,17 @@ hr{
   font-weight: bold;
 }
 
-
 #diagnostic-table-heading th{
   background-color: #F6F7F8;
   padding: 15px 0 16px 14px;
   border-bottom: 0;
 }
 
-
 #diagnostic-table-heading th:first-child{
   border-top-left-radius: 24px;
   border-bottom-left-radius: 24px;
 }
+
 #diagnostic-table-heading th:last-child{
   border-top-right-radius: 24px;
   border-bottom-right-radius: 24px;
@@ -466,10 +400,6 @@ hr{
 
 #diagnostic-table-data tr td{
   padding: 11px;
-}
-
-tbody, td, tfoot, th, thead, tr {
-  border-color: #F6F7F8;
 }
 
 .patient-info-main-container{
@@ -482,22 +412,6 @@ tbody, td, tfoot, th, thead, tr {
 
 .patient-info-main-container div{
 padding-left: 12px;
- 
-}
-
-.patient-personal-info p{
-  margin: 0;
-  font-size: 14px;
-}
-
-.patient-top-info{
-
-  font-weight: 300;
-
-}
-
-.patient-bottom-info{
-  font-weight: 500;
 }
 
 #patient-profile-container{
@@ -513,6 +427,17 @@ padding-left: 12px;
  font-size: 22px;
 }
 
+.patient-img{
+  padding-right: 12px;
+  width: 60px;
+  height: auto;
+}
+
+.patient-gender-age p{
+  margin: 0;
+  padding: 0;
+  display:flex;
+}
 
 #patient-selected-img{
   max-width: 150px;
@@ -521,6 +446,14 @@ padding-left: 12px;
   align-self: center;
   margin-bottom: 24px;
   padding-top: 32px;
+}
+
+.patient-section{
+  display: flex;
+}
+
+.patient-section-selected{
+  background-color: #D8FCF7;
 }
 
 #patients-general-info-container {
@@ -533,8 +466,37 @@ padding-left: 12px;
   margin: 24px 0;
 }
 
+.patients-info-list{
+  display: flex;
+  justify-content: space-between;
+  transition: 500ms;
+  padding: 20px;
+}
+
+.patients-info-list:hover{
+  cursor: pointer;
+  background-color: #F6F7F8;
+}
+
+.patients-info-list.selected{
+  background-color: #D8FCF7;
+}
+
 .patient-general-info{
   display: flex;
+}
+
+.patient-personal-info p{
+  margin: 0;
+  font-size: 14px;
+}
+
+.patient-top-info{
+  font-weight: 300;
+}
+
+.patient-bottom-info{
+  font-weight: 500;
 }
 
 #information-btn-container{
@@ -543,16 +505,16 @@ padding-left: 12px;
   margin-top: 40px;
 }
 
-.information-btn:hover{
-  background-color: #0cffdf;
-}
-
 .information-btn{
   border-radius: 41px;
   background-color: #01F0D0;
   font-size: 14px;
   padding: 11px 40px;
   border-style: none;
+}
+
+.information-btn:hover{
+  background-color: #0cffdf;
 }
 
 .lab-results-main-container{
@@ -570,60 +532,63 @@ padding-left: 12px;
 
 #lab-results-header{
   padding: 20px 0 10px 20px;
-
 }
 
 #lab-results-details-container{
   padding: 0 30px;
   overflow: scroll;
   height: 335px;
-
 }
 
 .lab-result{
-display: flex;
-justify-content: space-between;
-margin-bottom: 16px;
-font-size: 14px;
-padding: 11px;
-padding-left: 16px;
-padding-right: 16px;
-border-radius: 1px;
-
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  font-size: 14px;
+  padding: 11px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 1px;
 }
-
+  
 .lab-result-img-container{
   cursor: pointer;
 }
 
-
 .lab-result.selected-lab-result{
   background-color: #F6F7F8;
-
 }
 
-.col-md-12{
-  max-width: 766px;
-  
-
+.lab-result:hover{
+  padding: 11px 16px;
+  border-radius: 41px;
+  background-color: #F6F7F8;
+  cursor: pointer;
 }
 
-.col-md-6{
- max-width: 360px;
+.lab-results-scroll{
+  max-height: 100%;
+  overflow: scroll;
+}
 
-} 
 
 
 
 /* XS Overrides */
 @media only screen and (max-width: 576px){
 
-  #site-logo{
-    max-width: 120px;
-  } 
+
+  #page-header{
+    justify-content: space-between;
+    align-items: unset;
+  }
 
   #tech-care-logo-sm{
     display: block;
+  } 
+
+  #site-logo{
+    max-width: 120px;
   } 
 
   #tech-care-logo-lg{
@@ -634,41 +599,9 @@ border-radius: 1px;
     max-height: 45px;
   }
 
-  #patient-selected-img{
-    max-width: 160px;
-  }
-
-  .information-btn{
-    padding: 11px 25px;
-  }
-
-  .diagnosis-main-container{
-    margin: unset;
+  .patients-main-container{
+    margin: 32px 0 0 0;
     width: auto;
-  }
-
-  #diastolic-container{
-    padding-top: 16px;
-  }
-
-  #page-header{
-    justify-content: space-between;
-    align-items: unset;
-  }
-
-  .health-card-container-wrapper {
-    
-    flex-direction: column;
-    align-items: center;
-    }
-
-  .health-card-container{
-    max-width: 150px;
-    }
-
-  #patient-selected-img{
-    padding-top: 16px;
-    max-width: 130px;
   }
 
   .patient-img{
@@ -676,9 +609,45 @@ border-radius: 1px;
     height: 50px;
   }
 
+  #patient-selected-img{
+    padding-top: 16px;
+    max-width: 130px;
+  }
+
+  .three-dot-horizontal-icon{
+    display: none;
+  }
+
+  .patient-gender-age{
+    font-size: 12px;
+  }
+ 
+  .diagnosis-main-container{
+    margin: unset;
+    width: auto;
+  }
+
   #chart-details-container{
     display: inline-block;
     margin-left: 6px;
+  }
+
+  #blood-pressure{
+    text-wrap: unset;
+    font-size: 15px;
+  }
+
+  #blood-time-frame-container{
+    padding-right: 20px;
+  }
+
+  #blood-pressure-details{
+    text-wrap: unset;
+    font-size: 10px;
+  }
+
+  .diagnosis-header-container{
+    padding: 20px 20px 40px 20px;
   }
 
   #diagnosis-metrics-container{
@@ -687,41 +656,18 @@ border-radius: 1px;
     flex-direction: column;
   }
 
-  .diagnosis-header-container{
-    padding: 20px 20px 40px 20px;
+  #diastolic-container{
+    padding-top: 16px;
   }
 
+  .health-card-container-wrapper {
+    flex-direction: column;
+    align-items: center;
+    }
 
-  #blood-pressure{
-    text-wrap: unset;
-    font-size: 15px;
-  }
-
-  #blood-pressure-details{
-    text-wrap: unset;
-    font-size: 10px;
-  }
-
-  #patients-general-info-container{
-    padding-bottom: 24px;
-  }
-
-  .lab-results-main-container{
-    margin: 35px 18px 32px 0px;
-  }
-
-  .patients-main-container{
-    margin: 32px 0 0 0;
-    width: auto;
-  }
-
-  .patient-gender-age{
-    font-size: 12px;
-  }
-
-  #blood-time-frame-container{
-    padding-right: 20px;
-  }
+  .health-card-container{
+    max-width: 150px;
+    }
 
   #middle-card{
     margin: 20px;
@@ -731,11 +677,20 @@ border-radius: 1px;
     margin: 20px;
   }
 
-  .three-dot-horizontal-icon{
-    display: none;
+  #patients-general-info-container{
+    padding-bottom: 24px;
+  }
+
+  .information-btn{
+    padding: 11px 25px;
+  }
+
+  .lab-results-main-container{
+    margin: 35px 18px 32px 0px;
   }
 
 }  
+
 
 
 
@@ -780,6 +735,7 @@ border-radius: 1px;
 
 
 
+
   /* M Overrides */
   @media only screen and (max-width: 998px) and (min-width: 769px){
 
@@ -819,6 +775,7 @@ border-radius: 1px;
 
   }
     
+
 
 
   /* L Overrides */
