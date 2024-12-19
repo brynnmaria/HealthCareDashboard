@@ -136,10 +136,10 @@ body{
   padding: 20px;
 }
 
-#patients-title{
-  font-size: 24px;
+.patients-top-container h2{
+font-size: 22px;
 }
-
+  
 #search-icon{
   display: flex;
   cursor: pointer;
@@ -167,6 +167,10 @@ li {
 
 #diagnosis-header-container{
   padding: 20px 0px 40px 20px;
+}
+
+#diagnosis-header-container h1{
+  font-size: 22px;
 }
 
 #chart-details-container{
@@ -359,6 +363,7 @@ hr{
 #diagnostic-heading-txt{
   padding: 4px 0px 40px;
   margin: 0;
+  font-size: 22px;
 }
 
 tbody, td, tfoot, th, thead, tr {
@@ -420,7 +425,7 @@ padding-left: 12px;
   flex-direction: column;
 }
 
-#patient-profile-container h4{
+#patient-profile-container h2{
  display: flex;
  align-self: center;
  margin-bottom: 0;
@@ -528,6 +533,10 @@ padding-left: 12px;
 
 #lab-results-header-container{
   margin: 0; 
+}
+
+#lab-results-header-container h2{
+  font-size: 22px;
 }
 
 #lab-results-header{

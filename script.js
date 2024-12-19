@@ -248,12 +248,6 @@ function getPatientData(patientIndex) {
   }
 }
 
-
-  
-
-
-  
-
   // console.log(systolicArray);
   // console.log(diastolicArray);
 
